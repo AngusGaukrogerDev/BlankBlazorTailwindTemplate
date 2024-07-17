@@ -1,18 +1,15 @@
 ﻿@page "/counter"
-@rendermode InteractiveAuto
+@rendermode InteractiveServer
 
 <PageTitle>Counter</PageTitle>
 
 <h1 class="mb-4 text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-white">Counter</h1>
+<div class="flex flex-col justify-center items-center h-screen w-full">
+    <p class="text-black">Current count: @currentCount</p>
 
-<p>Current count: @currentCount</p>
-
-<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @onclick="IncrementCount">
-    Click me
-</button>
-
-<div class="text-4xl font-bold underline">
-    Welcome to your new Tailwind CSS styled Blazor app.
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @onclick="IncrementCount">
+        Click me
+    </button>
 </div>
 
 @code {
